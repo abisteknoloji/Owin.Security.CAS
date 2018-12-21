@@ -75,7 +75,7 @@ namespace Owin.Security.CAS
         /// The base url of the CAS server
         /// </summary>
         /// <example>https://cas.example.com/cas</example>
-        public string CasServerUrlBase { get; set; }
+        public virtual string CasServerUrlBase { get; set; }
 
         /// <summary>
         /// Gets or sets the <see cref="ICasTicketValidator"/> used to validate tickets from CAS 

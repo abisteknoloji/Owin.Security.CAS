@@ -44,9 +44,7 @@ namespace Owin.Security.CAS
             if (String.IsNullOrEmpty(Options.SignInAsAuthenticationType))
                 Options.SignInAsAuthenticationType = app.GetDefaultSignInAsAuthenticationType();
 
-            if (String.IsNullOrEmpty(Options.CasServerUrlBase))
-                throw new ApplicationException("CasServerUrlBase in options was not set - it must point to the CAS server URL");
-
+           
             _httpClient = new HttpClient(ResolveHttpMessageHandler(Options))
             {
                 Timeout = Options.BackchannelTimeout,

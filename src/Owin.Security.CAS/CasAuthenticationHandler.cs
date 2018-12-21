@@ -110,6 +110,10 @@ namespace Owin.Security.CAS
 
                 string returnTo = BuildReturnTo(Options.StateDataFormat.Protect(properties));
 
+                // This check is moved from middleware constructor to here in order to prevent early access errors.
+                if (String.IsNullOrEmpty(Options.CasServerUrlBase))
+                    throw new ApplicationException("CasServerUrlBase in options was not set - it must point to the CAS server URL");
+
                 string authorizationEndpoint =
                     Options.CasServerUrlBase + "/login" +
                     "?service=" + Uri.EscapeDataString(returnTo);
