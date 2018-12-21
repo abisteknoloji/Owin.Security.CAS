@@ -1,4 +1,5 @@
-# Owin.Security.CAS with Multi-Tenant support.
+# Owin.Security.CAS with Multi-Tenant support
+This repo is forked to add support for multi-tenant scenarios.
 
 # Owin.Security.CAS
 Owin.Security.CAS is an [OWIN](http://owin.org) authentication provider for [CAS](https://github.com/Jasig/cas)
